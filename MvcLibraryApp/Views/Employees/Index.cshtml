@@ -5,33 +5,38 @@
 *@
 @{
 }
-<a href="/Employees/Add">Add Employee</a>
-
-
-<table class="table" style="margin-top:10px;">
-    <thead>
-        <tr>
-            <th scope="col">#</th>
-            <th scope="col">Name</th>
-            <th scope="col">LastName</th>
-            <th scope="col">Age</th>
-            <th scope="col">Operations</th>
-        </tr>
-    </thead>
-    <tbody>
-        @foreach (var employee in Model)
-        {
-            <tr>
-                <th scope="row">@employee.Id</th>
-                <td>@employee.Name</td>
-                <td>@employee.LastName</td>
-                <td>@employee.Age</td>
-                <td>
-                    <a href="/Employees/Delete/@employee.Id" class="btn btn-danger"><i class="bi bi-trash"></i></a>
-                    <a href="/Employees/Update/@employee.Id" class="btn btn-warning"><i class="bi bi-tools"></i></a>
-                <td />
-            </tr>
-        }
-
-    </tbody>
+<div class="container my-5">
+    <div class="row justify-content-center">
+        <div class="col-md-8">
+            <h3 class="text-center mb-4" style="color: #e74c3c; font-size: 2rem;">Employee List</h3>
+            <a href="/Employees/Add" class="btn btn-primary mb-3" style="background-color: #3498db; border-color: #2980b9;">Add Employee</a>
+            <table class="table table-striped" style="margin-top:10px;">
+                <thead>
+                    <tr>
+                        <th scope="col">#</th>
+                        <th scope="col">Name</th>
+                        <th scope="col">LastName</th>
+                        <th scope="col">Age</th>
+                        <th scope="col">Operations</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach (var employee in Model)
+                    {
+                        <tr>
+                            <th scope="row">@employee.Id</th>
+                            <td>@employee.Name</td>
+                            <td>@employee.LastName</td>
+                            <td>@employee.Age</td>
+                            <td>
+                                <a href="/Employees/Delete/@employee.Id" class="btn btn-danger"><i class="bi bi-trash"></i></a>
+                                <a href="/Employees/Update/@employee.Id" class="btn btn-warning"><i class="bi bi-tools"></i></a>
+                            </td>
+                        </tr>
+                    }
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
 </table>
