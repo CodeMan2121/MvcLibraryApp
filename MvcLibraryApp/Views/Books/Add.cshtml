@@ -1,0 +1,23 @@
+﻿@using MvcLibraryApp.ViewModels.Books;
+@model AddBookViewModel
+@addTagHelper *, Microsoft.AspNetCore.Mvc.TagHelpers
+@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+}
+
+<h3>Add Books</h3>
+<form asp-controller="Books" asp-action="Add" method="post">
+    <div class="mb-3">
+        <label for="Name" class="form-label">Name</label>
+        <input type="text" class="form-control" id="Name" name="Name" asp-for="Name">
+
+        <label for="Author" class="form-label">Author</label>
+        <input type="text" class="form-control" id="Author" name="Author" asp-for="Author">
+
+        <label for="ReleaseDate" class="form-label">ReleaseDate</label>
+        <input type="datetime" class="form-control" id="ReleaseDate" name="ReleaseDate" asp-for="ReleaseDate">
+    </div>
+    <button type="submit" class="btn btn-primary">Submit</button>
+</form>
