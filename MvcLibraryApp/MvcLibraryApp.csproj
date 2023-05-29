@@ -7,6 +7,13 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Compile Remove="ViewModels\Students\NewFolder\**" />
+    <Content Remove="ViewModels\Students\NewFolder\**" />
+    <EmbeddedResource Remove="ViewModels\Students\NewFolder\**" />
+    <None Remove="ViewModels\Students\NewFolder\**" />
+  </ItemGroup>
+
+  <ItemGroup>
     <PackageReference Include="Microsoft.EntityFrameworkCore" Version="7.0.5" />
     <PackageReference Include="Microsoft.EntityFrameworkCore.Design" Version="7.0.5">
       <PrivateAssets>all</PrivateAssets>

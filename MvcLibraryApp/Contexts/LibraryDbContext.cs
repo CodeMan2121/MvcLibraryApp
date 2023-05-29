@@ -18,6 +18,7 @@ namespace MvcLibraryApp.Contexts
         }
         public DbSet<Book> Books { get; set; }
         public DbSet<Employee> Employees { get; set; }
+        public DbSet<Student> Students { get; set; }
 
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
@@ -42,6 +43,15 @@ namespace MvcLibraryApp.Contexts
                 a.Property(p => p.Name).HasColumnName("Name");
                 a.Property(p => p.LastName).HasColumnName("LastName");
                 a.Property(p => p.Age).HasColumnName("Age");
+            });
+            modelBuilder.Entity<Student>(a =>
+            {
+                a.ToTable("Students").HasKey(s => s.Id);
+                a.Property(a => a.Id).HasColumnName("Id");
+                a.Property(a=>a.Name).HasColumnName("Name");
+                a.Property(a => a.LastName).HasColumnName("LastName");
+                a.Property(a => a.Language).HasColumnName("Language");
+                a.Property(a=>a.Number).HasColumnName("Number");
             });
         }
     }
