@@ -20,6 +20,7 @@ namespace MvcLibraryApp.Contexts
         public DbSet<Employee> Employees { get; set; }
         public DbSet<Student> Students { get; set; }
         public DbSet<Teacher> Teachers { get; set; }
+        public DbSet<Course> Courses { get; set; }
 
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
@@ -61,6 +62,13 @@ namespace MvcLibraryApp.Contexts
                 a.Property(a => a.Name).HasColumnName("Name");
                 a.Property(a => a.LastName).HasColumnName("LastName");
                 a.Property(a => a.ExperienceYear).HasColumnName("Number");
+            });
+            modelBuilder.Entity<Course>(a =>
+            {
+                a.ToTable("Courses").HasKey(s => s.Id);
+                a.Property(a => a.Id).HasColumnName("Id");
+                a.Property(a => a.LessonName).HasColumnName("LessonName");
+                a.Property(a => a.LessonTime).HasColumnName("LessonTime");
             });
         }
     }
