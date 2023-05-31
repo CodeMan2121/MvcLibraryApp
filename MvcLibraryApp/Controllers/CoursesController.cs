@@ -36,6 +36,7 @@ namespace MvcLibraryApp.Controllers
                 LessonTime = model.LessonTime,
             };
             _courseRepository.Add(course);
+            TempData["Message"] = "Record added successfully";
             return RedirectToAction("Index");
         }
 

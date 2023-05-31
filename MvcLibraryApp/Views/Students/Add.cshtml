@@ -21,8 +21,16 @@
                 </div>
                 <div class="mb-3">
                     <label for="Language" class="form-label" style="color: #e67e22;">Language</label>
-                    <input type="text" class="form-control" id="Language" name="Language" asp-for="Language" style="background-color: #f5f5f5; color: #000000;">
+                    <select class="form-select" id="Language" name="Language" asp-for="Language" style="background-color: #f5f5f5; color: #000000;">
+                        <option value="">Select a language</option>
+                        <option value="English">English</option>
+                        <option value="Spanish">Spanish</option>
+                        <option value="French">French</option>
+                        <option value="German">German</option>
+                        <option value="Turkish">Türkçe</option>
+                    </select>
                 </div>
+
                 <div class="mb-3">
                     <label for="Number" class="form-label" style="color: #9b59b6;">Number</label>
                     <input type="number" class="form-control" id="Number" name="Number" asp-for="Number" style="background-color: #f5f5f5; color: #000000;">
