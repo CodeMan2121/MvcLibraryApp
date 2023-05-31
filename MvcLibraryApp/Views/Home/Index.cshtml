@@ -2,7 +2,52 @@
     ViewData["Title"] = "Home Page";
 }
 
-<div class="text-center">
-    <h1 class="display-4">Welcome</h1>
-    <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
-</div>
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>@ViewData["Title"]</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <style>
+        .container {
+            max-width: 500px;
+            margin: 0 auto;
+            margin-top: 100px;
+        }
+
+        .card-text {
+            margin-top: 20px;
+        }
+        .card-body{
+            background-color: yellowgreen;
+        }
+
+        .btn-start {
+            margin-top: 30px;
+        }
+        body{
+            background-color: rgb(225,225,160);
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Library System</h1>
+
+        <div class="card">
+            <div class="card-body">
+                <h5 class="card-title">Welcome!</h5>
+                <p class="card-text">This web site help you to add, delete or update something to ADU Library.</p>
+
+                <p class="card-text">This project made by Cebrail Meşe, Yusuf Günay and Raşit Akşit.</p>
+
+            </div>
+        </div>
+    </div>
+
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>
